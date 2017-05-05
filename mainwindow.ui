@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>825</width>
+    <height>510</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>641</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Image</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>10</y>
+      <width>551</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>10</y>
+      <width>42</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>kernel</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>0</y>
+      <width>105</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>     Element Shape</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioButton">
+       <property name="text">
+        <string>MORPH_ELLIPSE</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="text">
+        <string>MORPH_RECT</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioButton_3">
+       <property name="text">
+        <string>MORPH_CROSS</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>825</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOpen_Image">
+    <property name="title">
+     <string>Start</string>
+    </property>
+    <addaction name="actionOpen_Image"/>
+    <addaction name="actionSave_Image"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuProcess1">
+    <property name="title">
+     <string>Process1</string>
+    </property>
+    <addaction name="actionFlip_horizontal"/>
+    <addaction name="actionFlip_vertical"/>
+    <addaction name="actionTurn_left"/>
+    <addaction name="actionTurn_right"/>
+    <addaction name="actionResize"/>
+   </widget>
+   <widget class="QMenu" name="menuProcess2">
+    <property name="title">
+     <string>Process2</string>
+    </property>
+    <addaction name="actionBoxFilter"/>
+    <addaction name="actionMeanBlur"/>
+    <addaction name="actionGaussianBlur"/>
+    <addaction name="actionMedianBlur"/>
+    <addaction name="actionBilateralFilter"/>
+   </widget>
+   <widget class="QMenu" name="menuProcess3">
+    <property name="title">
+     <string>Process3</string>
+    </property>
+    <addaction name="actionErode"/>
+    <addaction name="actionDilate"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionClose"/>
+    <addaction name="actionMorphological_Gradient"/>
+    <addaction name="actionTop_Hat"/>
+    <addaction name="actionBlack_Hat"/>
+   </widget>
+   <widget class="QMenu" name="menuProcess4">
+    <property name="title">
+     <string>Process4</string>
+    </property>
+    <addaction name="actionGray"/>
+    <addaction name="actionCanny"/>
+    <addaction name="actionGRAY2RGB"/>
+   </widget>
+   <addaction name="menuOpen_Image"/>
+   <addaction name="menuProcess1"/>
+   <addaction name="menuProcess2"/>
+   <addaction name="menuProcess3"/>
+   <addaction name="menuProcess4"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen_Image">
+   <property name="text">
+    <string>Open Image</string>
+   </property>
+  </action>
+  <action name="actionSave_Image">
+   <property name="text">
+    <string>Save Image</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionFlip_horizontal">
+   <property name="text">
+    <string>Flip horizontal</string>
+   </property>
+  </action>
+  <action name="actionFlip_vertical">
+   <property name="text">
+    <string>Flip vertical</string>
+   </property>
+  </action>
+  <action name="actionTurn_left">
+   <property name="text">
+    <string>Turn left</string>
+   </property>
+  </action>
+  <action name="actionTurn_right">
+   <property name="text">
+    <string>Turn right</string>
+   </property>
+  </action>
+  <action name="actionBoxFilter">
+   <property name="text">
+    <string>BoxFilter</string>
+   </property>
+  </action>
+  <action name="actionMeanBlur">
+   <property name="text">
+    <string>MeanBlur</string>
+   </property>
+  </action>
+  <action name="actionGaussianBlur">
+   <property name="text">
+    <string>GaussianBlur</string>
+   </property>
+  </action>
+  <action name="actionMedianBlur">
+   <property name="text">
+    <string>MedianBlur</string>
+   </property>
+  </action>
+  <action name="actionBilateralFilter">
+   <property name="text">
+    <string>BilateralFilter</string>
+   </property>
+  </action>
+  <action name="actionErode">
+   <property name="text">
+    <string>Erode</string>
+   </property>
+  </action>
+  <action name="actionDilate">
+   <property name="text">
+    <string>Dilate</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Opening Operation</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Closing Operation</string>
+   </property>
+  </action>
+  <action name="actionMorphological_Gradient">
+   <property name="text">
+    <string>Morphological Gradient</string>
+   </property>
+  </action>
+  <action name="actionTop_Hat">
+   <property name="text">
+    <string>Top Hat</string>
+   </property>
+  </action>
+  <action name="actionBlack_Hat">
+   <property name="text">
+    <string>Black Hat</string>
+   </property>
+  </action>
+  <action name="actionResize">
+   <property name="text">
+    <string>Resize</string>
+   </property>
+  </action>
+  <action name="actionGray">
+   <property name="text">
+    <string>RGB2GRAY</string>
+   </property>
+  </action>
+  <action name="actionCanny">
+   <property name="text">
+    <string>Canny</string>
+   </property>
+  </action>
+  <action name="actionGRAY2RGB">
+   <property name="text">
+    <string>GRAY2RGB</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>340</x>
+     <y>55</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>340</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>70</x>
+     <y>55</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
